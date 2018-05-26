@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, TextInput,
+import { StyleSheet, Text, TextInput, Image,
           View, TouchableOpacity } from 'react-native';
 import Header from './Header';
 export default class App extends React.Component {
@@ -14,6 +14,9 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+        <Image 
+          source={require('./img/con-cho.jpg')}
+          style={{width: '100%', height: 300}}/>
         <Header tencuaban="something v2"/>
         <TextInput 
           onChangeText={(val) => this.setState({name: val})}
@@ -28,7 +31,7 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#dedede',
     alignItems: 'center',
     justifyContent: 'center',
   },
